@@ -1,7 +1,7 @@
 /** 
  * Prints the calendars of all the years in the 20th century.
  */
-public class Calendar1 {	
+public class Calendar {	
     // Starting the calendar on 1/1/1900
 	static int dayOfMonth = 1;   
 	static int month = 1;
@@ -15,13 +15,17 @@ public class Calendar1 {
 	 */
 	public static void main(String args[]) {
 	
-	 	while (year < 1902) {
-			String sundayPrinter = "";
-			if (dayOfWeek % 7 == 0) {
-				sundayPrinter = " Sunday";
-			}
+        int finalYear = Integer.parseInt(args[0]);
 
-			System.out.println(dayOfMonth + "/" + month + "/" + year + sundayPrinter);
+	 	while (year < finalYear + 1) {
+			if (year == finalYear) {
+                String sundayPrinter = "";
+                if (dayOfWeek % 7 == 0) {
+                    sundayPrinter = " Sunday";
+                }
+
+                System.out.println(dayOfMonth + "/" + month + "/" + year + sundayPrinter);
+            }
 	 		advance();
         }
 	 	//// Write the necessary ending code here
