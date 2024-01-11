@@ -19,13 +19,15 @@ public class Calendar1 {
 	 	while (year < 2000) {
 			String sundayPrinter = "";
 			if (dayOfWeek % 7 == 0) {
-				sundayCount++;
 				sundayPrinter = " Sunday";
+				if (dayOfMonth == 1) {
+					sundayCount++;
+				}
 			}
 
 			System.out.println(dayOfMonth + "/" + month + "/" + year + sundayPrinter);
 	 		advance();
-        }
+        	}
 	 	//// Write the necessary ending code here
 		System.out.println("During the 20th century, " + sundayCount + " Sundays fell on the first day of the month");
 	 }
