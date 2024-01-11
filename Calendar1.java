@@ -16,7 +16,7 @@ public class Calendar1 {
 	 */
 	public static void main(String args[]) {
 	
-	 	while (year < 1902) {
+	 	while (year < 2000) {
 			String sundayPrinter = "";
 			if (dayOfWeek % 7 == 0) {
 				sundayCount++;
